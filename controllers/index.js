@@ -19,7 +19,7 @@ var indexController = {
 		       ]
 		    }
 
-  	      Message.find({ "location.coordinates": {"$nearSphere": { "$geometry": geoJSONpoint, "$maxDistance": 50 } }} , function(err, data){
+  	      Message.find({ "location.coordinates": {"$nearSphere": { "$geometry": geoJSONpoint, "$maxDistance": 5000 } }} , function(err, data){
               // if (err) return handleErr(err);
               res.send(data)
 
